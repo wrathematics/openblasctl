@@ -5,7 +5,7 @@
 * **Author:** Drew Schmidt
 
 
-A micro-package for controlling the number of threads used by OpenBLAS from R.  If you're somehow incapable of using the `OMP_NUM_THREADS` environment variable, then you can use this. Control the number of OpenBLAS threads from R.
+A micro-package for controlling the number of threads used by OpenBLAS from R.  If you're somehow incapable of using the `OMP_NUM_THREADS` environment variable, then you can use this.
 
 
 ## Installation
