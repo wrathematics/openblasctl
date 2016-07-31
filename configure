@@ -2585,10 +2585,11 @@ if test "${with_openblas_libpath+set}" = set; then :
 fi
 
 
-
 ### TODO make more portable eventually maybe
-if test "x$(uname)" = "xDarwin"; then
-  OB_LIBPATH="$OB_LIBPATH -L/usr/local/opt/openblas/lib/"
+if test "x$OB_LIBPATH" = "x"; then
+  if test "x$(uname)" = "xDarwin"; then
+    OB_LIBPATH="-L/usr/local/opt/openblas/lib/"
+  fi
 fi
 
 
@@ -2638,6 +2639,7 @@ _ACEOF
   LIBS="-lopenblas $LIBS"
 
 fi
+
 
 
 
