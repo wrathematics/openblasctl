@@ -7,6 +7,8 @@
 
 A micro-package for controlling the number of threads used by OpenBLAS from R.  If you're somehow incapable of using the `OMP_NUM_THREADS` environment variable, then you can use this.
 
+See the details section of `?openblasctl::openblas_set_num_threads` for a for a full explanation.
+
 
 ## Installation
 
