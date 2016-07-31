@@ -19,6 +19,20 @@ ghit::install_github("wrathematics/openblasctl")
 remotes::install_github("wrathematics/openblasctl")
 ```
 
+If your OpenBLAS installation is in a strange place, you can specify it using the `--with-openblas-libpath` configure flag. For example:
+
+```bash
+R CMD INSTALL openblasctl --configure-args="--with-openblas-libpath='/path/to/libopenblas/files/'"
+```
 
 
+## Package Use
 
+```r
+### Set desired number of threads
+library(openblasctl)
+openblas_set_num_threads(2)
+
+### Call your linear algebra routines
+La.svd(some_big_matrix)
+```
