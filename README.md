@@ -1,31 +1,36 @@
 # openblasctl
 
 * **Version:** 0.1-0
-* **License:** [![License](http://img.shields.io/badge/license-BSD%202--Clause-orange.svg?style=flat)](http://opensource.org/licenses/BSD-2-Clause)
+* **URL**: https://github.com/wrathematics/openblasctl
+* **License:** [BSD 2-Clause](http://opensource.org/licenses/BSD-2-Clause)
 * **Author:** Drew Schmidt
 
-
-A micro-package for controlling the number of threads used by OpenBLAS from R.  If you're somehow incapable of using the `OMP_NUM_THREADS` environment variable, then you can use this.
+A micro-package for controlling the number of threads used by OpenBLAS from R. This can be useful if you did not set the `OMP_NUM_THREADS` environment variable before starting your R session. Obviously this requires that you are using the [OpenBLAS library](https://www.openblas.net/) with R.
 
 See the details section of `?openblasctl::openblas_set_num_threads` for a for a full explanation.
 
 
+
 ## Installation
 
-The development version is maintained on GitHub, and can easily be installed by any of the packages that offer installations from GitHub:
+You can install the stable version from [the HPCRAN](https://hpcran.org) using the usual `install.packages()`:
 
 ```r
-### Pick your preference
-devtools::install_github("wrathematics/openblasctl")
-ghit::install_github("wrathematics/openblasctl")
+install.packages("openblasctl", repos="https://hpcran.org")
+```
+
+The development version is maintained on GitHub:
+
+```r
 remotes::install_github("wrathematics/openblasctl")
 ```
 
-If your OpenBLAS installation is in a strange place, you can specify it using the `--with-openblas-libpath` configure flag. For example:
+If your OpenBLAS installation is in a strange place, you can specify it using the `--with-openblas-libpath` configure argument. For example:
 
-```bash
-R CMD INSTALL openblasctl --configure-args="--with-openblas-libpath='/path/to/libopenblas/files/'"
+```r
+install.packages("openblasctl", repos="https://hpcran.org", configure-args="--with-openblas-libpath='/path/to/libopenblas/files/'"
 ```
+
 
 
 ## Package Use

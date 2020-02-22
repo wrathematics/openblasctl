@@ -2,7 +2,10 @@ Package: openblasctl
 Type: Package
 Title: Control Number of OpenBLAS Threads
 Version: 0.1-0
-Description: See title.
+Description: A micro-package for controlling the number of threads used by
+    OpenBLAS from R. This can be useful if you did not set the 'OMP_NUM_THREADS'
+    environment variable before starting your R session. Obviously this requires
+    that you are using the OpenBLAS library with R.
 License: BSD 2-clause License + file LICENSE
 Depends:
     R (>= 3.1.0)
@@ -15,4 +18,5 @@ Authors@R: c(person("Drew", "Schmidt", role=c("aut", "cre"),
     person("Christian", "Heckendorf", role="ctb", comment="Caught some
     memory errors."))
 Maintainer: Drew Schmidt <wrathematics@gmail.com>
-RoxygenNote: 5.0.1
+RoxygenNote: 7.0.2
+HPCRAN: blas
