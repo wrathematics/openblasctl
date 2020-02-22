@@ -5,13 +5,12 @@
 \alias{openblasctl-package}
 \title{openblasctl}
 \description{
-A micro-package for controlling the number of threads used
-by OpenBLAS from R.  If you're somehow incapable of using
-the OMP_NUM_THREADS environment variable, then you can
-use this.
+A micro-package for controlling the number of threads used by OpenBLAS from
+R. This can be useful if you did not set the `OMP_NUM_THREADS` environment
+variable before starting your R session. Obviously this requires that you are
+using the OpenBLAS library with R.
 }
 \author{
 Drew Schmidt
 }
 \keyword{package}
-
