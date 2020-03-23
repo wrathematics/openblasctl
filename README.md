@@ -28,7 +28,11 @@ remotes::install_github("wrathematics/openblasctl")
 If your OpenBLAS installation is in a strange place, you can specify it using the `--with-openblas-libpath` configure argument. For example:
 
 ```r
-install.packages("openblasctl", repos="https://hpcran.org", configure-args="--with-openblas-libpath='/path/to/libopenblas/files/'"
+# Stable version
+install.packages("openblasctl", repos="https://hpcran.org", configure.args="--with-openblas-libpath='/path/to/openblas/'")
+
+# Development version
+remotes::install_github("wrathematics/openblasctl", configure.args="--with-openblas-libpath='/path/to/openblas/'")
 ```
 
 
